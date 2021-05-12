@@ -1,0 +1,22 @@
+{
+  "name": "using-redux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "redox_demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipecamargos/Redux-Demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filipecamargos/Redux-Demo/issues"
+  },
+  "homepage": "https://github.com/filipecamargos/Redux-Demo#readme",
+  "dependencies": {
+    "redux": "^4.1.0"
+  }
+}
