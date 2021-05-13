@@ -3,9 +3,22 @@ const redux = require("redux");
 
 //Creating a reducer function to get the old state and the action to be dispatched
 const counterReducer = (state = { counter: 0 }, action) => {
-  return {
-    counter: state.counter + 1,
-  };
+  //Can check for the action dispatched
+  if (action.type === "increment") {
+    return {
+      counter: state.counter + 1,
+    };
+  }
+
+  if (action.type === 'double') {
+    return {
+      counter: state.counter * 2,
+    }
+  }
+
+  //Else default state is returned
+  return state;
+  
 };
 
 //create a central store to manage some data with the reducer function
@@ -27,3 +40,8 @@ store.subscribe(counterSubscriber);
 store.dispatch({
   type: "increment",
 });
+
+//another action can be dispatched
+store.dispatch({
+  type: 'double',
+})
