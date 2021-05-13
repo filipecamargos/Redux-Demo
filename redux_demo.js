@@ -16,6 +16,12 @@ const counterReducer = (state = { counter: 0 }, action) => {
     }
   }
 
+  if (action.type === 'double') {
+    return {
+      counter: state.counter - 1,
+    }
+  }
+
   //Else default state is returned
   return state;
   
@@ -44,4 +50,9 @@ store.dispatch({
 //another action can be dispatched
 store.dispatch({
   type: 'double',
+})
+
+//another action can be dispatched
+store.dispatch({
+  type: 'decrement',
 })
